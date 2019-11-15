@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -6,18 +7,60 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
-    NavMeshAgent navMeshAgent;
+    public float chaseRange = 5f;
 
-    // Start is called before the first frame update
+    NavMeshAgent navMeshAgent;
+    float distanceToTarget = Mathf.Infinity;
+
+    bool isProvoked = false;
+
+    
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         
+        
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        distanceToTarget = Vector3.Distance(target.position, transform.position);
+        if (isProvoked)
+        {
+            EngageTarget();
+        }
+        else if (distanceToTarget <= chaseRange)
+        {
+            isProvoked = true;
+        }
+    }
+
+    private void EngageTarget()
+    {   //bigger than
+        if (distanceToTarget >= navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
+        }
+        //less than
+        if(distanceToTarget <= navMeshAgent.stoppingDistance)
+        {
+            ShootTarget();
+        }
+    }
+
+    private void ShootTarget()
+    {
+        Debug.Log(name + " hit " + target.name);
+    }
+
+    private void ChaseTarget()
+    {
         navMeshAgent.SetDestination(target.position);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }
