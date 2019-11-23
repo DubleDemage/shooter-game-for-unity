@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 904481593890878930}
   - component: {fileID: 904481593880696082}
   - component: {fileID: 904481593882649430}
+  - component: {fileID: 7688452574088683927}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -133,6 +134,18 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
+--- !u!114 &7688452574088683927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904481593893934772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19a5fd248271cd459ef4321a593240a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904481593893934774
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +409,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7df0b63427e404bb26a046d2ec5c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPCamera: {fileID: 0}
+  FPCamera: {fileID: 904481593894261906}
   range: 100
+  damage: 20
+  muzzleFlash: {fileID: 7520801103594161729}
+  hitEffect: {fileID: 7241689946824535020, guid: 2d2bef56b275f084d951a4d301c2253d,
+    type: 3}
 --- !u!1 &904481594859830971
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,11 +687,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 904481594262519886}
     m_Modifications:
-    - target: {fileID: 3360542172024696037, guid: 4a60d8477aafac045a1f56d3a60c7813,
-        type: 3}
-      propertyPath: m_Name
-      value: Muzzle Flash Orange
-      objectReference: {fileID: 0}
     - target: {fileID: 3350055855090824723, guid: 4a60d8477aafac045a1f56d3a60c7813,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -683,12 +695,12 @@ PrefabInstance:
     - target: {fileID: 3350055855090824723, guid: 4a60d8477aafac045a1f56d3a60c7813,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.088
+      value: 0.106
       objectReference: {fileID: 0}
     - target: {fileID: 3350055855090824723, guid: 4a60d8477aafac045a1f56d3a60c7813,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 0.217
       objectReference: {fileID: 0}
     - target: {fileID: 3350055855090824723, guid: 4a60d8477aafac045a1f56d3a60c7813,
         type: 3}
@@ -730,11 +742,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3360542172024696037, guid: 4a60d8477aafac045a1f56d3a60c7813,
+        type: 3}
+      propertyPath: m_Name
+      value: Muzzle Flash Orange
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a60d8477aafac045a1f56d3a60c7813, type: 3}
 --- !u!4 &8361757844370055438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3350055855090824723, guid: 4a60d8477aafac045a1f56d3a60c7813,
+    type: 3}
+  m_PrefabInstance: {fileID: 6518719092044896029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7520801103594161729 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3614249443508621660, guid: 4a60d8477aafac045a1f56d3a60c7813,
     type: 3}
   m_PrefabInstance: {fileID: 6518719092044896029}
   m_PrefabAsset: {fileID: 0}
