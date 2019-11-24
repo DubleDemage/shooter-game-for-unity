@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 904481593890878930}
   - component: {fileID: 904481593880696082}
   - component: {fileID: 904481593882649430}
+  - component: {fileID: 5250289589504157484}
+  - component: {fileID: 1213133155336571909}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -133,6 +135,31 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
+--- !u!114 &5250289589504157484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904481593893934772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19a5fd248271cd459ef4321a593240a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+--- !u!114 &1213133155336571909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904481593893934772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6261025e6fd82fe40ba231044b97dc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904481593893934774
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +425,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 0}
   range: 100
+  damage: 20
+  muzzleFlash: {fileID: 0}
+  hitEffect: {fileID: 0}
 --- !u!1 &904481594859830971
 GameObject:
   m_ObjectHideFlags: 0
