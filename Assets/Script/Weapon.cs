@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
 
     public Camera FPCamera;
     public float range = 100f;
-    public float damage = 20f;
+    [SerializeField] float damage = 20f;
 
     public ParticleSystem muzzleFlash;
     public GameObject hitEffect;
