@@ -13,6 +13,14 @@ public class Weapon : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject hitEffect;
 
+    AudioSource audioSource;
+    AudioClip silencer;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +28,7 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
             MuzzleFlashEffect();
+            audioSource.Play();
         }
     }
 

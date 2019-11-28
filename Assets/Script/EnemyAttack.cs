@@ -8,9 +8,13 @@ public class EnemyAttack : MonoBehaviour
     public float damage = 10f;
     public ParticleSystem gunFlash;
 
+    AudioSource audioSource;
+    AudioClip arSound;
+
     private void Start()
     {
         player = FindObjectOfType<PlayerHealth>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void AttackHitEvent()
@@ -18,5 +22,6 @@ public class EnemyAttack : MonoBehaviour
         if (player == null) return;
         gunFlash.Play();
         player.TakeDamage(damage);
+        audioSource.Play();
     }
 }
