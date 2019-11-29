@@ -12,6 +12,8 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToPlayer = Mathf.Infinity;
 
+    public float turnSpeed = 10f;
+
     bool isProvoked = false;
 
 
@@ -37,9 +39,15 @@ public class EnemyAI : MonoBehaviour
         
     }
 
+    public void AgroAttack()
+    {
+        isProvoked = true;
+    }
+
     private void AttackTarget()
     {
-        if(distanceToPlayer >= navMeshAgent.stoppingDistance)
+        FacePlayer();
+        if (distanceToPlayer >= navMeshAgent.stoppingDistance)
         {
             ChasePlayer();
         }
@@ -60,6 +68,14 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(player.position);
     }
+
+    private void FacePlayer()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
+    }
+
 
     private void OnDrawGizmosSelected()
     {

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   chaseRange: 10
+  turnSpeed: 10
 --- !u!95 &5038058852291499987
 Animator:
   serializedVersion: 3
@@ -149,7 +150,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 50a6609c8445c9f45805550683d07349, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -180,7 +181,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f5c11229ae93c4e49906716cac4f89e4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
