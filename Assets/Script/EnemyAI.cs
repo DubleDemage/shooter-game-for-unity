@@ -39,6 +39,11 @@ public class EnemyAI : MonoBehaviour
         
     }
 
+    public void OnDamageTake()
+    {
+        isProvoked = true;
+    }
+
     private void AttackTarget()
     {
         FacePlayer();
@@ -53,12 +58,8 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void ShootTarget()
-    {
-        
+    {    
         GetComponent<Animator>().SetBool("attack", true);
-        
-
-
     }
 
     private void ChasePlayer()

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 107313118987098379}
   - component: {fileID: 107313118987098380}
   - component: {fileID: 107313118987098381}
+  - component: {fileID: 4386408222794298560}
   - component: {fileID: 107313118987098376}
   - component: {fileID: 1211143146}
-  - component: {fileID: 4386408222794298560}
   - component: {fileID: 1871679408083498221}
   m_Layer: 0
   m_Name: Enemy
@@ -121,33 +121,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &107313118987098376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107313118987098382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5536b23120844814ba305cfbe69c4819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  chaseRange: 10
---- !u!114 &1211143146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107313118987098382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c23cf33f940ec34d93bd7b25f68d303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
 --- !u!95 &4386408222794298560
 Animator:
   serializedVersion: 3
@@ -167,6 +140,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &107313118987098376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107313118987098382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5536b23120844814ba305cfbe69c4819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  chaseRange: 10
+  turnSpeed: 5
+--- !u!114 &1211143146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107313118987098382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c23cf33f940ec34d93bd7b25f68d303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
 --- !u!114 &1871679408083498221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,9 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fa52741c26408448e0ef4920aab1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   damage: 40
   gunFlash: {fileID: 0}
+  arSound: {fileID: 0}
 --- !u!1001 &3661250845109612903
 PrefabInstance:
   m_ObjectHideFlags: 0
