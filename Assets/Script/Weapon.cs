@@ -16,6 +16,8 @@ public class Weapon : MonoBehaviour
     AudioSource audioSource;
     AudioClip silencer;
 
+    public Ammo ammoSlot;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -26,9 +28,14 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
-            MuzzleFlashEffect();
-            audioSource.Play();
+            if(ammoSlot.GetCurrentAmmo() > 0)
+            {
+                Shoot();
+                MuzzleFlashEffect();
+                audioSource.Play();
+                ammoSlot.ReduceCurrentAmmo();
+            }
+            
         }
     }
 
