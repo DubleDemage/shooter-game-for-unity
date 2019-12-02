@@ -13,8 +13,10 @@ public class Weapon : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject hitEffect;
 
-    public AudioClip silencer;
+    AudioClip silencer;
     AudioSource audioSource;
+
+    public Ammo ammoSlot;
 
     private void Start()
     {
@@ -26,9 +28,14 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
-            MuzzleFlashEffect();
-            audioSource.Play();
+            if(ammoSlot.GetCurrentAmmo() > 0)
+            {
+                Shoot();
+                MuzzleFlashEffect();
+                audioSource.Play();
+                ammoSlot.ReduceCurrentAmmo();
+            }
+            
         }
     }
 
