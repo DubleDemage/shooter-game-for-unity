@@ -194,7 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622e87e35b58ab04f891958142e83782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 9
+  - ammoType: 1
+    ammoAmount: 30
 --- !u!4 &29154234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 584a8ef4749c89745b7ae07f3ba7617f,
@@ -4209,7 +4213,7 @@ PrefabInstance:
     - target: {fileID: 2921570280986201434, guid: bdc1378bbf58d3a4495c7882ab39a480,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc1378bbf58d3a4495c7882ab39a480, type: 3}
@@ -4238,6 +4242,7 @@ MonoBehaviour:
   hitEffect: {fileID: 7241689946824535020, guid: 2d2bef56b275f084d951a4d301c2253d,
     type: 3}
   ammoSlot: {fileID: 13411309}
+  ammoType: 1
 --- !u!82 &904481594101998962
 AudioSource:
   m_ObjectHideFlags: 0
