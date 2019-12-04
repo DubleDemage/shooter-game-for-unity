@@ -3529,7 +3529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1632737704
 Transform:
   m_ObjectHideFlags: 0
@@ -4100,6 +4100,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 904481593893934772, guid: bdc1378bbf58d3a4495c7882ab39a480,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 904481594262519887, guid: bdc1378bbf58d3a4495c7882ab39a480,
         type: 3}
       propertyPath: m_IsActive
@@ -4159,11 +4164,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 904481593893934772, guid: bdc1378bbf58d3a4495c7882ab39a480,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3369115988946936121, guid: bdc1378bbf58d3a4495c7882ab39a480,
         type: 3}

@@ -18,6 +18,8 @@ public class Weapon : MonoBehaviour
 
     public Ammo ammoSlot;
 
+    public AmmoType ammoType;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,12 +30,12 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if(ammoSlot.GetCurrentAmmo() > 0)
+            if(ammoSlot.GetCurrentAmmo(ammoType) > 0)
             {
                 Shoot();
                 MuzzleFlashEffect();
                 audioSource.Play();
-                ammoSlot.ReduceCurrentAmmo();
+                ammoSlot.ReduceCurrentAmmo(ammoType);
             }
             
         }
