@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Weapon : MonoBehaviour
 
     public AmmoType ammoType;
 
+    public Text ammoText;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,6 +31,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DisplayAmmoText();
         if (Input.GetButtonDown("Fire1"))
         {
             if(ammoSlot.GetCurrentAmmo(ammoType) > 0)
@@ -39,6 +43,12 @@ public class Weapon : MonoBehaviour
             }
             
         }
+    }
+
+    private void DisplayAmmoText()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        ammoText.text = currentAmmo.ToString();
     }
 
     private void MuzzleFlashEffect()
