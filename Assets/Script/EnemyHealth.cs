@@ -7,6 +7,13 @@ public class EnemyHealth : MonoBehaviour
 {
     public float hitPoints = 100f;
 
+    public Slider enemyHealthBar;
+
+    public void Update()
+    {
+        enemyHealthBar.value = hitPoints;
+    }
+
     public void TakeDamage(float damage)
     {
         GetComponent<EnemyAI>().OnDamageTake();
