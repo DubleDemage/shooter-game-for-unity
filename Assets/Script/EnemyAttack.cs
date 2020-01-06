@@ -6,22 +6,22 @@ public class EnemyAttack : MonoBehaviour
 {
     PlayerHealth player;
     public float damage = 10f;
-    public ParticleSystem gunFlash;
+    //public ParticleSystem gunFlash;
 
-    AudioSource audioSource;
-    AudioClip arSound;
+    //AudioSource audioSource;
+    //AudioClip arSound;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerHealth>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     public void AttackHitEvent()
     {
         if (player == null) return;
-        gunFlash.Play();
+        //gunFlash.Play();
         player.TakeDamage(damage);
-        audioSource.Play();
+        //audioSource.Play();
     }
 }
