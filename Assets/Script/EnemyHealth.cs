@@ -9,6 +9,13 @@ public class EnemyHealth : MonoBehaviour
 
     public Slider enemyHealthBar;
 
+    bool isDead = false;
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
     public void Update()
     {
         enemyHealthBar.value = hitPoints;
@@ -20,8 +27,18 @@ public class EnemyHealth : MonoBehaviour
         hitPoints -= damage;
         if(hitPoints <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        if (isDead)
+        {
+            return;
+        }
+        isDead = true;
+        GetComponent<Animator>().SetTrigger("die");
     }
        
 }
