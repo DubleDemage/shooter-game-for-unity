@@ -15,16 +15,24 @@ public class EnemyAI : MonoBehaviour
 
     bool isProvoked = false;
 
+    EnemyHealth health;
+
 
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        health = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (health.IsDead())
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
         distanceToPlayer = Vector3.Distance(player.position, transform.position);
         if (isProvoked)
         {
