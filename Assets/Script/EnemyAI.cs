@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform player;
+    [SerializeField] Transform player;
     public float chaseRange = 10f;
 
     NavMeshAgent navMeshAgent;
