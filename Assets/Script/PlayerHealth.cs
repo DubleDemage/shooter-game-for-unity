@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
 
     public Slider healthBar;
 
+    public int healthAmount = 10;
+
     public void Update()
     {
         healthBar.value = hitPoints;
@@ -22,4 +24,10 @@ public class PlayerHealth : MonoBehaviour
             GetComponent<DeathHandler>().HandleDeath();
         }
     }
+
+    public void AddHealth()
+    {
+        hitPoints = hitPoints + healthAmount;
+    }
+
 }
