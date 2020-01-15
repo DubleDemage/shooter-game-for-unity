@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7313113608252468476}
     m_Modifications:
-    - target: {fileID: 6693793305196625799, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
-        type: 3}
-      propertyPath: m_Name
-      value: AR Ammo (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6322748077159074759, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +77,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6693793305196625799, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
+        type: 3}
+      propertyPath: m_Name
+      value: AR Ammo (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 163631374264917974, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
         type: 3}
       propertyPath: m_Mesh
@@ -101,16 +101,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4963391644617160754, guid: bb254cae75aecc24a8814df18c26569a,
-        type: 3}
-      propertyPath: m_Name
-      value: AR PickUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 175979035742270655, guid: bb254cae75aecc24a8814df18c26569a,
-        type: 3}
-      propertyPath: m_Radius
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6417875928566306745, guid: bb254cae75aecc24a8814df18c26569a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -166,6 +156,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4963391644617160754, guid: bb254cae75aecc24a8814df18c26569a,
+        type: 3}
+      propertyPath: m_Name
+      value: AR PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 175979035742270655, guid: bb254cae75aecc24a8814df18c26569a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064376341038963529, guid: bb254cae75aecc24a8814df18c26569a,
+        type: 3}
+      propertyPath: ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064376341038963529, guid: bb254cae75aecc24a8814df18c26569a,
+        type: 3}
+      propertyPath: ammoAmount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb254cae75aecc24a8814df18c26569a, type: 3}
 --- !u!4 &7313113608252468476 stripped
@@ -181,11 +191,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7313113608252468476}
     m_Modifications:
-    - target: {fileID: 6693793305196625799, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
-        type: 3}
-      propertyPath: m_Name
-      value: AR Ammo
-      objectReference: {fileID: 0}
     - target: {fileID: 6322748077159074759, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -256,6 +261,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6693793305196625799, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
+        type: 3}
+      propertyPath: m_Name
+      value: AR Ammo
+      objectReference: {fileID: 0}
     - target: {fileID: 163631374264917974, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
         type: 3}
       propertyPath: m_Mesh
@@ -275,11 +285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7313113608252468476}
     m_Modifications:
-    - target: {fileID: 6693793305196625799, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
-        type: 3}
-      propertyPath: m_Name
-      value: AR Ammo (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6322748077159074759, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -349,6 +354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693793305196625799, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
+        type: 3}
+      propertyPath: m_Name
+      value: AR Ammo (1)
       objectReference: {fileID: 0}
     - target: {fileID: 163631374264917974, guid: 3b9d519b25a2a094a8b7f815c4154e1d,
         type: 3}

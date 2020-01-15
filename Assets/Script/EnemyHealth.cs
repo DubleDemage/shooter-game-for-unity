@@ -11,9 +11,16 @@ public class EnemyHealth : MonoBehaviour
 
     bool isDead = false;
 
+    public GameObject lootDrop;
+
     public bool IsDead()
     {
         return isDead;
+    }
+
+    private void Start()
+    {
+        lootDrop.SetActive(false);
     }
 
     public void Update()
@@ -39,6 +46,7 @@ public class EnemyHealth : MonoBehaviour
         }
         isDead = true;
         GetComponent<Animator>().SetTrigger("die");
+        lootDrop.SetActive(true);
     }
        
 }
