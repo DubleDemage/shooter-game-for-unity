@@ -4525,5 +4525,25 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1802722497}
+    - target: {fileID: 3909361490059382239, guid: bdc1378bbf58d3a4495c7882ab39a480,
+        type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909361490059382239, guid: bdc1378bbf58d3a4495c7882ab39a480,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909361490059382239, guid: bdc1378bbf58d3a4495c7882ab39a480,
+        type: 3}
+      propertyPath: orthographic size
+      value: 65.41237
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909361490059382239, guid: bdc1378bbf58d3a4495c7882ab39a480,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc1378bbf58d3a4495c7882ab39a480, type: 3}
